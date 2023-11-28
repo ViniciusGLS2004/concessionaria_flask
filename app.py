@@ -6,9 +6,9 @@ from flask_mysqldb import MySQL
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 app.secret_key = 'many random bytes'
 
-app.config['MYSQL_HOST'] = 'localhost'# isso isso, #esse aqui é o flask e o outro é o direto no banco de dados?
-app.config['MYSQL_USER'] = 'root' #me liguei, essa senha aqui tá braba viu kkkk
-app.config['MYSQL_PASSWORD'] = 'odeiolol' # top senhas kkkkk
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root' 
+app.config['MYSQL_PASSWORD'] = 'odeiolol' 
 app.config['MYSQL_DB'] = 'cs_veiculo'
 
 mysql = MySQL(app)
