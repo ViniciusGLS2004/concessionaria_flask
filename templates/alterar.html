@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JM Cadastro - Editar Veículo</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 15px;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+            height: 200vh;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #addcarro {
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .add-form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .btn {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-danger {
+            background-color: #FF0000;
+        }
+        .success-message {
+            color: #008000;
+        }
+        .error-message {
+            color: #FF0000;
+        }
+
+        .navbar {
+            background-color: #ffffff; /* Cor de fundo da navbar */
+            overflow: hidden;
+            border: 1px solid #ddd; /* Borda da navbar */
+            max-width: 200px;
+        }
+
+        /* Estilo para os links na navbar */
+        .navbar a {
+             /* Coloca os links à esquerda */
+            display: inline-block; /* Exibe os links em blocos */
+            color: rgb(0, 0, 0); /* Cor do texto dos links */
+            text-align: center; /* Alinhamento do texto */
+            width: 200px; /* Largura fixa para os links (ajuste conforme necessário) */
+            padding: 14px 0; /* Espaçamento interno dos links */
+            text-decoration: none; /* Remove sublinhado padrão */
+        }
+
+        /* Estilo para os links na navbar quando passar o mouse por cima */
+        .navbar a:hover {
+            background-color: #000000; /* Cor de fundo quando passar o mouse */
+            color: rgb(255, 255, 255); /* Cor do texto quando passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/home">Voltar a Página Inicial</a>
+        <!-- Outros links da navbar podem ser adicionados aqui -->
+    </div>
+    <div class="container">
+        <h1>Editar Veículo</h1>
+        
+        <div class="edit-form">
+            <form method="POST" action="/update">    
+                <input type="hidden" name="id" value="{{ cs_veiculo[0] }}">
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <input type="text" id="tipo" name="tipo" value="{{ cs_veiculo[1] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="cor">Cor:</label>
+                    <input type="text" id="cor" name="cor" value="{{ cs_veiculo[2] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="ano">Ano:</label>
+                    <input type="text" id="ano" name="ano" value="{{ cs_veiculo[3] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="estado">Estado:</label>
+                    <input type="text" id="estado" name="estado" value="{{ cs_veiculo[4] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="leilao">Leilão:</label>
+                    <input type="text" id="leilao" name="leilao" value="{{ cs_veiculo[5] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="placa">Placa:</label>
+                    <input type="text" id="placa" name="placa" value="{{ cs_veiculo[6] }}" required>
+                </div>   
+                <div class="form-group">
+                    <label for="marca">Marca:</label>
+                    <input type="text" id="marca" name="marca" value="{{ cs_veiculo[7] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="modelo">Modelo:</label>
+                    <input type="text" id="modelo" name="modelo" value="{{ cs_veiculo[8] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="preco">Preço:</label>
+                    <input type="text" id="preco" name="preco" value="{{ cs_veiculo[9] }}" required>
+                </div>
+                <button class="btn" type="submit">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
